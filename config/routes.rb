@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "generate#index"
   get "generate", to: "generate#new"
   post "generate", to: "generate#create"
+  get "available", to: "generate#available"
 end

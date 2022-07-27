@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_27_075201) do
+ActiveRecord::Schema.define(version: 2022_07_27_095516) do
 
   create_table "api_keys", force: :cascade do |t|
     t.string "api_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
   end
 
 end

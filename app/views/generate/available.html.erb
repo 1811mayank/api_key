@@ -1,0 +1,17 @@
+<h1>this is to get Available key</h1>
+
+<% @check = 1 %>
+<% @api_key.each do |key|%>
+    <% if key.status == 'unblock'  then %>
+        <% @check = 0 %>
+        
+        <p><%= p "Your api key is : " %><%= key.api_key %> </p>
+        
+        <% key.status = 'block' %>
+        <% key.save %>
+       
+    <%end %>
+<%end %>
+<%  if @check == 1 %>
+    <%= p "404 error" %>
+<% end %>
