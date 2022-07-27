@@ -1,0 +1,14 @@
+<%= form_with url: "/unblock", method: :patch do |form| %>
+  
+
+  <div >
+    <%= form.label :api_key %>
+    <%= form.text_field :api_key %>
+  </div>
+
+  <div class="actions">
+
+    <%= form.submit "unblock" %>
+  </div>
+  
+<% end %>

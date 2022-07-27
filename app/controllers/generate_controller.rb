@@ -14,12 +14,10 @@ class GenerateController < ActionController::Base
     end
 
     def available
-
         @api_key = ApiKey.all
-        
-      
     end
 
+    
     
 
 end

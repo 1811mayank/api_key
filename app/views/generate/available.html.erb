@@ -8,8 +8,9 @@
         <p><%= p "Your api key is : " %><%= key.api_key %> </p>
         
         <% key.status = 'block' %>
+        
         <% key.save %>
-       
+       <% break %>
     <%end %>
 <%end %>
 <%  if @check == 1 %>

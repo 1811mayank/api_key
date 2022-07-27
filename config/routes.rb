@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get "generate", to: "generate#new"
   post "generate", to: "generate#create"
   get "available", to: "generate#available"
+  get "unblock", to: "unblock#edit"
+  patch "unblock", to: "unblock#update"
 end
