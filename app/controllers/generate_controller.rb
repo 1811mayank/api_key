@@ -18,7 +18,9 @@ class GenerateController < ActionController::Base
         @api_key = ApiKey.all
     end
 
-    
+    def future
+        DeleteJob.perform_later
+    end
     
 
 end

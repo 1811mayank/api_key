@@ -1,0 +1,15 @@
+<h1>delete item </h1>
+
+<%= form_with url: delete_path, method: :delete do |form| %>
+  
+  <div >
+    <%= form.label :api_key %>
+    <%= form.text_field :api_key %>
+  </div>
+
+  <div class="actions">
+
+    <%= form.submit%>
+  </div>
+  
+<% end %>

@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   get "available", to: "generate#available"
   get "unblock", to: "unblock#edit"
   patch "unblock", to: "unblock#update"
+
+  get "delete", to: "unblock#delete"
+  delete "delete", to: "unblock#destroy"
+
+  get "check", to: "generate#future"
+
 end

@@ -3,6 +3,11 @@ class ApiKey < ApplicationRecord
     validates_uniqueness_of  :api_key
   
     before_validation :set_api_key
+    # def deliver 
+    #   destroy
+    # end
+    # handle_asynchronously :deliver, :run_at => Proc.new { 30.seconds.from_now }
+
 
   private
 
