@@ -2,13 +2,8 @@ class DeleteJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
-    
-    @api_key =  ApiKey.all
-    @api_key.each do |i|
-      time_since_update = 5.minutes.ago 
-      if time_since_update > i.updated_at 
-           i.destroy
-      end
-    end
+    time_since_update = 5.minutes.ago
+    ApiKey.where("updated_at < ?",time_since_update).destroy_all
+
   end
 end

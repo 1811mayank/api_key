@@ -7,7 +7,9 @@ class ApiKey < ApplicationRecord
     #   destroy
     # end
     # handle_asynchronously :deliver, :run_at => Proc.new { 30.seconds.from_now }
-
+    def deliver
+      destroy_all
+    end
 
   private
 

@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "delete", to: "unblock#delete"
   delete "delete", to: "unblock#destroy"
 
-  get "check", to: "generate#future"
-
+  get "alive", to: "generate#future"
+  patch "update", to: "generate#update"
 end

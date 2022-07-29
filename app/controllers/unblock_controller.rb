@@ -4,10 +4,9 @@ class UnblockController < ActionController::Base
     end
 
     def update
-       
-        @api_key = ApiKey.where(api_key: params[:api_key])
-        @api_key[0].status = "unblock"
-        if @api_key[0].save
+        @api_key = ApiKey.find_by(api_key: params[:api_key])
+        @api_key.status = "unblock"
+        if @api_key.save
             flash[:notice] = "Api key status change to unblock"
             redirect_to root_path
         else
@@ -18,9 +17,8 @@ class UnblockController < ActionController::Base
         
     end
     def destroy
-        
-        @api_key = ApiKey.where(api_key: params[:api_key])
-        @api_key.destroy(@api_key[0].id)
+        @api_key = ApiKey.find_by(api_key: params[:api_key])
+        @api_key.destroy(@api_key.id)
         flash[:notice] = "api key deleted successfully"
         redirect_to root_path
     end

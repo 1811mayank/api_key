@@ -1,4 +1,17 @@
-<h1>End point for deleting Api Key that is not alive since 5 min</h1>
+<%= form_with url: "/update", method: :patch do |form| %>
+  
+
+  <div >
+    <%= form.label :api_key %>
+    <%= form.text_field :api_key %>
+  </div>
+
+  <div class="actions">
+
+    <%= form.submit "Keep Alive" %>
+  </div>
+  
+<% end %>
 
 
 

@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_07_28_062112) do
     t.string "api_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status"
+    t.string "status", default: "QWqQv7Q4hEKJGgrrPQXahQtt"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
